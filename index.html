@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Displays</title>
+  <style>
+    body{
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1vw;
+    }
+    .container{
+      height: 100vh;
+      display: grid;
+      /* grid-template: 20% 50% 20% / 1fr 1fr 1fr; */
+      /* grid-template: 20% 50% 20% / repeat(5, 1fr); */
+      /* grid-template: 20% 50% 20% / repeat(5, minmax(100px,1fr)); */
+      grid-template: 20% 50% 20% / minmax(200px,1fr) 1fr 1fr 1fr;
+      grid-gap: 5% 5%;
+    }
+    .item{
+      padding: 10px;
+      border: 1px solid red;
+    }
+    .item:nth-of-type(4){
+      background: #00ffff;
+      padding: 0;
+      display: grid;
+      grid-template: 24% 50% 24% / 24% 50% 24%;
+      grid-gap: 1% 1%;
+    }
+    .item:nth-of-type(5), .subitem:nth-of-type(5), .subitem-nth5:nth-of-type(5), .subitem-nth5-sub:nth-of-type(5), .subitem-nth5-sub-5:nth-of-type(5){
+      background: #ccaaff;
+      padding: 0;
+      display: grid;
+      grid-template: 23% 50% 23% / 23% 50% 23%;
+      grid-gap: 2% 2%;
+    }
+    .subitem, .subitem-nth5, .subitem-nth5-sub, .subitem-nth5-sub-5, .subitem-nth5-sub-5-sub{
+      border: 1px solid red;
+    }
+  </style>
+</head>
+<body>
+  <section class="container">
+    <div class="item">contenido #1</div>
+    <div class="item">contenido #2</div>
+    <div class="item">contenido #3</div>
+    <div class="item">
+      <div class="subitem">#1</div>
+      <div class="subitem">#2</div>
+      <div class="subitem">#3</div>
+      <div class="subitem">#4</div>
+      <div class="subitem">#5</div>
+      <div class="subitem">#6</div>
+      <div class="subitem">#7</div>
+      <div class="subitem">#8</div>
+      <div class="subitem">#9</div>
+    </div>
+    <div class="item">
+      <div class="subitem">#1</div>
+      <div class="subitem">#2</div>
+      <div class="subitem">#3</div>
+      <div class="subitem">#4</div>
+      <div class="subitem">
+        <div class="subitem-nth5">#1</div>
+        <div class="subitem-nth5">#2</div>
+        <div class="subitem-nth5">#3</div>
+        <div class="subitem-nth5">#4</div>
+        <div class="subitem-nth5">
+          <div class="subitem-nth5-sub">#1</div>
+          <div class="subitem-nth5-sub">#2</div>
+          <div class="subitem-nth5-sub">#3</div>
+          <div class="subitem-nth5-sub">#4</div>
+          <div class="subitem-nth5-sub">
+              <div class="subitem-nth5-sub-5"></div>
+              <div class="subitem-nth5-sub-5"></div>
+              <div class="subitem-nth5-sub-5"></div>
+              <div class="subitem-nth5-sub-5"></div>
+              <div class="subitem-nth5-sub-5"></div>
+              <div class="subitem-nth5-sub-5"></div>
+              <div class="subitem-nth5-sub-5"></div>
+              <div class="subitem-nth5-sub-5"></div>
+              <div class="subitem-nth5-sub-5"></div>
+          </div>
+          <div class="subitem-nth5-sub">#6</div>
+          <div class="subitem-nth5-sub">#7</div>
+          <div class="subitem-nth5-sub">#8</div>
+          <div class="subitem-nth5-sub">#9</div>
+        </div>
+        <div class="subitem-nth5">#6</div>
+        <div class="subitem-nth5">#7</div>
+        <div class="subitem-nth5">#8</div>
+        <div class="subitem-nth5">#9</div>
+      </div>
+      <div class="subitem">#6</div>
+      <div class="subitem">#7</div>
+      <div class="subitem">#8</div>
+      <div class="subitem">#9</div>
+    </div>
+    <div class="item">contenido #6</div>
+    <div class="item">contenido #7</div>
+    <div class="item">contenido #8</div>
+    <div class="item">contenido #9</div>
+  </section>
+</body>
+</html>
